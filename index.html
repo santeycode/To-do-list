@@ -12,7 +12,7 @@
         <div class="wrapper">    
             <h1>To do:</h1>
             <div class="wrap2">
-                <table border="2px">
+                <table id="list" border="2px">
                     <tr>
                         <td>Выучить базу - алгоритмы и структуры данных</td>
                         <td> <input type="checkbox" name="" id=""></td>
@@ -32,11 +32,69 @@
             </div>
         </div>
         <div class="qw">
-            <p>Task <input type="text" class="ww"></p>
+            <p>Task <input id="input" type="text" class="ww" placeholder="what do you need to do?"></p>
         </div>
         <div>
-            <button>Save item</button>
+            <button id="button">Save item</button>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
+<!--
+    <div>
+<ol id="list"></ol>
+<p>
+  Какие группы рок ещё знаешь?
+</p>
+<input id='input'>
+<button id="button">Добавить</button>
+</div>
+
+
+<script>
+function addItem(text){
+  var list = document.getElementById('list');
+  var item = document.createElement('li');
+  item.innerHTML = text;
+  list.appendChild(item);
+};
+
+var input = document.getElementById('input')
+input.value = '';
+input.focus();
+var button = document.getElementById('button');
+
+input.addEventListener('keyup', handleKeyup);
+
+function handleClick(){
+  addItem(input.value);
+  input.value = '';
+};
+button.addEventListener('click',handleClick);
+
+var rockBandList = [
+    'Дельфин',
+    'Кукрыниксы',
+    'КИШ',
+    'Земфира',
+    'ДДТ',
+    'Сплин',
+    'Чичерина',
+    'Наутилус',
+    'БИ-2'
+];
+
+for (var i = 0; i < rockBandList.length; i++) {
+  addItem(rockBandList[i]);
+};
+ function handleKeyup(e) {
+  if (e.keyCode === 13) { // Если был нажат Enter
+    addItem(input.value);
+    input.value = '';
+  }
+}
+input.addEventListener('keyup', handleKeyup);
+</script>
+
+-->
