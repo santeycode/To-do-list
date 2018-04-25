@@ -1,0 +1,16 @@
+{
+  "name": "js-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently 'http-server -o -a 0.0.0.0 public' 'livereload public'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "http-server": "^0.11.1",
+    "livereload": "^0.7.0"
+  }
+}
